@@ -18,11 +18,14 @@ import contact_img from './contact_image.png'
 import razorpay_logo from './razorpay_logo.png'
 import stripe_logo from './stripe_logo.png'
 import cross_icon from './cross_icon.png'
+import hero_image_sub from './hero_image_2.png'
+
 
 export const assets = {
     logo,
     logo_Black,
     hero_img,
+    hero_image_sub,
     cart_icon,
     dropdown_icon,
     exchange_icon,
