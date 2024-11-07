@@ -233,7 +233,7 @@ const PlaceOrder = () => {
               />
             </div>
 
-            <div
+            {/*<div
               onClick={() => setMethod("razorpay")}
               className={`flex items-center gap-3 border p-2 px-3 cursor-pointer ${
                 method === "razorpay" ? "border-green-400" : ""
@@ -249,7 +249,7 @@ const PlaceOrder = () => {
                 src={assets.razorpay_logo}
                 alt="Razorpay Logo"
               />
-            </div>
+            </div>*/}
 
             <div
               onClick={() => setMethod("cod")}
