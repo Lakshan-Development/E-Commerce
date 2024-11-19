@@ -16,7 +16,7 @@ import menu_icon from './menu_icon.png'
 import about_img from './about_image.png'
 import contact_img from './contact_image.png'
 import razorpay_logo from './razorpay_logo.png'
-import stripe_logo from './stripe_logo.png'
+import visa_master_card_logo from './card_logo.png'
 import cross_icon from './cross_icon.png'
 import hero_image_sub from './hero_image_2.png'
 
@@ -40,6 +40,6 @@ export const assets = {
     about_img,
     contact_img,
     razorpay_logo,
-    stripe_logo,
+    visa_master_card_logo,
     cross_icon
 }

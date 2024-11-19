@@ -228,7 +228,7 @@ const PlaceOrder = () => {
               ></p>
               <img
                 className="h-5 mx-4"
-                src={assets.stripe_logo}
+                src={assets.visa_master_card_logo}
                 alt="Stripe Logo"
               />
             </div>

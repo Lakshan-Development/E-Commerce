@@ -125,10 +125,12 @@ const Collection = () => {
       </div>
 
       {/* Product Section */}
-      <div className="flex-1 overflow-y-auto p-5 sm:ml-0 ">
+      <div className="flex-1 overflow-y-auto p-5 sm:ml-0">
         <div className="flex justify-between items-center text-base sm:text-2xl mb-4">
           <Title txt1="ALL" txt2="COLLECTIONS" />
-          <select onChange={(e) => setSortType(e.target.value)} className="border-2 border-gray-300 text-sm px-2">
+          <select 
+            onChange={(e) => setSortType(e.target.value)} 
+            className="border-2 border-gray-300 text-sm px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
             <option value="Relavent">Sort by: Relevant</option>
             <option value="low-high">Sort by: Low-High</option>
             <option value="high-low">Sort by: High-Low</option>
@@ -137,8 +139,13 @@ const Collection = () => {
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 gap-y-6">
           {filterProducts.map((item, index) => (
-            <div key={index} className="bg-white p-4 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
-              <ProductItems id={item._id} image={item.image} name={item.name} price={item.price} />
+            <div key={index} className="bg-white p-4 rounded-lg shadow-md hover:shadow-xl transform transition-all duration-300 hover:scale-105">
+              <ProductItems 
+                id={item._id} 
+                image={item.image} 
+                name={item.name} 
+                price={item.price} 
+              />
             </div>
           ))}
         </div>
