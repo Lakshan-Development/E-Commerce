@@ -12,6 +12,17 @@ const Collection = () => {
   const [subCategory, setSubCategory] = useState([]);
   const [sortType, setSortType] = useState('relavent');
 
+  // Toggle body scroll lock
+  useEffect(() => {
+    if (showFilter) {
+      document.body.classList.add('filter-open');
+    } else {
+      document.body.classList.remove('filter-open');
+    }
+    return () => document.body.classList.remove('filter-open'); // Cleanup
+  }, [showFilter]);
+
+  // Filter Logic
   const toggleCategory = (e) => {
     if (category.includes(e.target.value)) {
       setCategory((prev) => prev.filter((item) => item !== e.target.value));
@@ -78,15 +89,14 @@ const Collection = () => {
       {/* Filter Button for Mobile */}
       <button
         onClick={() => setShowFilter(true)}
-        className="border-1 px-2 border-black sm:hidden font-semibold text-back fixed top-20 left-4 z-20"
+        className="border-1 px-2 border-black sm:hidden font-semibold text-back fixed top-20 left-4 z-30"
       >
         Open Filters -
       </button>
-      
 
       {/* Filter Sidebar */}
       <div
-        className={`fixed top-0 left-0 w-3/4 h-full bg-white z-30 p-5 shadow-md overflow-y-auto transition-transform duration-300 transform ${
+        className={`fixed top-0 left-0 w-3/4 h-full bg-white z-40 p-5 shadow-md overflow-y-auto transition-transform duration-300 transform ${
           showFilter ? 'translate-x-0' : '-translate-x-full'
         } sm:translate-x-0 sm:relative sm:w-1/4`}
       >
@@ -100,7 +110,7 @@ const Collection = () => {
             &times;
           </button>
         </div>
-        
+
         <div className="border border-gray-300 p-5 mt-4">
           <p className="mb-3 text-sm font-medium">CATEGORIES</p>
           <div className="flex flex-col gap-2 text-sm font-light text-gray-700">
