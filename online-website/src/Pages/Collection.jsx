@@ -74,7 +74,7 @@ const Collection = () => {
   }, [sortType]);
 
   return (
-    <div className="flex pt-10 border-t h-screen relative">
+    <div className="flex pt-14 border-t h-screen relative">
       {/* Filter Button for Mobile */}
       <button
         onClick={() => setShowFilter(true)}
